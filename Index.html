@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repositorio de Aplicaciones Educativas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-50">
+
+    <header class="text-center py-10 bg-white border-b">
+        <h1 class="text-4xl font-bold text-gray-800">Repositorio de Aplicaciones Educativas</h1>
+        <p class="text-lg text-gray-600 mt-2">Una colección de aplicaciones y recursos creados por la comunidad.</p>
+    </header>
+
+    <main class="container mx-auto p-4 md:p-8">
+        <!-- Controles de Búsqueda y Filtros -->
+        <div class="mb-8 p-4 bg-white rounded-lg shadow-sm border">
+            <input type="text" id="searchInput" placeholder="🔍 Buscar por todos los campos..." class="w-full p-3 border rounded-md focus:ring-2 focus:ring-blue-500">
+        </div>
+
+        <!-- Contenedor para las Tarjetas de Aplicaciones -->
+        <div id="loading" class="text-center text-gray-500">Cargando aplicaciones...</div>
+        <div id="app-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            <!-- Las tarjetas de las aplicaciones se insertarán aquí con JavaScript -->
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
