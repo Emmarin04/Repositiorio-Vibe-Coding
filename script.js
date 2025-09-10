@@ -1,6 +1,6 @@
 // --- CONFIGURACIÓN ---
 // PEGA AQUÍ LA URL DE TU API DE GOOGLE APPS SCRIPT
-const API_URL = 'const API_URL = 'https://script.google.com/macros/s/AKfycbwhwCzLxTb1e3fJeGbo3OBf9vsljJKbiklknXEFneDjJjc4hMwjlexqx-u96TGiSveT/exec'; 
+const API_URL = 'const API_URL = 'AIzaSyA_dU02VW_faoCSvyLFW7hpIjn4Uudcr0g'; 
 '; 
 
 // --- ELEMENTOS DEL DOM ---
@@ -86,4 +86,5 @@ searchInput.addEventListener('input', (e) => {
     displayApps(filteredApps);
 
 });
+
 
