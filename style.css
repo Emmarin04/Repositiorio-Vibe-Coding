@@ -1,0 +1,117 @@
+/* ... Estilos anteriores (app-card, tag, control-btn, theme-icon) se mantienen ... */
+.app-card {
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    background-color: white;
+    border: 1px solid #e5e7eb;
+}
+.dark .app-card {
+    background-color: #1f2937;
+    border-color: #374151;
+}
+.app-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+.tag {
+    background-color: #eef2ff; color: #4338ca; font-size: 0.75rem; font-weight: 500; padding: 0.25rem 0.75rem; border-radius: 9999px; margin: 0.25rem; display: inline-block;
+}
+.dark .tag {
+    background-color: #3730a3; color: #e0e7ff;
+}
+.control-btn {
+    display: flex; align-items: center; justify-content: center; padding: 0.75rem; border-radius: 0.375rem; border: 1px solid #d1d5db; background-color: white; font-weight: 500; transition: background-color 0.2s, border-color 0.2s;
+}
+.dark .control-btn {
+    background-color: #374151; border-color: #4b5563;
+}
+.control-btn:hover {
+    background-color: #f9fafb; border-color: #9ca3af;
+}
+.dark .control-btn:hover {
+    background-color: #4b5563;
+}
+.theme-icon {
+    padding: 0.5rem; border-radius: 9999px; transition: background-color 0.2s; color: #4b5563;
+}
+.dark .theme-icon {
+    color: #d1d5db;
+}
+.theme-icon:hover {
+    background-color: #f3f4f6;
+}
+.dark .theme-icon:hover {
+    background-color: #4b5563;
+}
+
+/* --- NUEVOS ESTILOS --- */
+
+/* Botón de Favoritos en la tarjeta */
+.favorite-btn {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    padding: 0.5rem;
+    border-radius: 9999px;
+    background-color: rgba(255, 255, 255, 0.7);
+    color: #9ca3af; /* gray-400 */
+    transition: color 0.2s, transform 0.2s;
+}
+.dark .favorite-btn {
+    background-color: rgba(31, 41, 55, 0.7);
+}
+.favorite-btn:hover {
+    transform: scale(1.1);
+}
+.favorite-btn.favorited {
+    color: #ef4444; /* red-500 */
+}
+
+/* Rejilla para los filtros en el modal */
+.filter-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.5rem;
+}
+@media (min-width: 768px) {
+    .filter-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+.filter-grid label {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+    border-radius: 0.375rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+.filter-grid label:hover {
+    background-color: #f3f4f6;
+}
+.dark .filter-grid label:hover {
+    background-color: #374151;
+}
+.filter-grid input {
+    margin-right: 0.5rem;
+}
+
+/* Estilos de Paginación */
+.pagination-btn {
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.375rem;
+    transition: background-color 0.2s;
+}
+.dark .pagination-btn {
+    border-color: #4b5563;
+}
+.pagination-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+.pagination-btn:not(:disabled):hover {
+    background-color: #f9fafb;
+}
+.dark .pagination-btn:not(:disabled):hover {
+     background-color: #374151;
+}
