@@ -1,5 +1,5 @@
 // --- CONFIGURACIÓN ---
-const API_URL = 'AIzaSyA_dU02VW_faoCSvyLFW7hpIjn4Uudcr0g'; 
+const API_URL = 'https://script.google.com/macros/s/AKfycbw9UdqbAeIgFWFn3B_7JHvvQhlxnRoiHFK3T3OCeEPUFARaNUs8kwD-6O6X3as-KiBz/exec'; 
 
 // --- ELEMENTOS DEL DOM ---
 const appContainer = document.getElementById('app-container');
@@ -237,5 +237,6 @@ function toggleTheme() {
     localStorage.setItem('color-theme', isDark ? 'dark' : 'light');
 
 }
+
 
 
