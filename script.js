@@ -191,13 +191,17 @@ function setupEventListeners() {
         currentPage = 1;
         renderApps();
     });
-    favoritesBtn.addEventListener('click', () => {
-        isFavoritesFilterActive = !isFavoritesFilterActive;
-        favoritesBtn.classList.toggle('bg-blue-200', isFavoritesFilterActive);
-        darkFavoritesBtn.classList.toggle('bg-blue-800', isFavoritesFilterActive);
-        currentPage = 1;
-        renderApps();
-    });
+    // --- DENTRO DE LA FUNCIÓN setupEventListeners ---
+favoritesBtn.addEventListener('click', () => {
+    isFavoritesFilterActive = !isFavoritesFilterActive;
+    
+    // Aplicamos y quitamos las clases para ambos modos (claro y oscuro)
+    favoritesBtn.classList.toggle('bg-blue-200', isFavoritesFilterActive);
+    favoritesBtn.classList.toggle('dark:bg-blue-800', isFavoritesFilterActive); // Tailwind se encarga del resto
+    
+    currentPage = 1;
+    renderApps();
+});
     filtersBtn.addEventListener('click', () => filterModal.classList.remove('hidden'));
     closeModalBtn.addEventListener('click', () => filterModal.classList.add('hidden'));
     applyFiltersBtn.addEventListener('click', () => {
@@ -237,6 +241,7 @@ function toggleTheme() {
     localStorage.setItem('color-theme', isDark ? 'dark' : 'light');
 
 }
+
 
 
 
